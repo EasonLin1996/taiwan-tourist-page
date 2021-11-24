@@ -1,0 +1,42 @@
+.logoHeader {
+  background-color: #6e9292;
+}
+
+.noLogoHeader {
+  position: fixed;
+  width: 100%;
+}
+
+.nav {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  padding: 25px 0;
+  width: 95%;
+  margin: 0 auto;
+}
+
+.list {
+  display: flex;
+  align-items: center;
+  .list-item {
+    padding: 6px;
+    color: rgba(0, 0, 0, 0.5);
+    font-weight: 600;
+    &:not(:last-child) {
+      border-right: 2px solid rgba(0, 0, 0, 0.3);
+    }
+  }
+}
+
+.icon-box {
+  display: flex;
+  width: 80px;
+  justify-content: space-around;
+  > * {
+    flex-grow: 0;
+  }
+  img {
+    padding: 3px;
+  }
+}
