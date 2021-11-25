@@ -1,0 +1,19 @@
+.iconHoverWrap {
+    img{
+      transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+      position: absolute;
+      left: 0;
+      top: 0;
+      &:nth-child(2){
+        opacity: 0;
+      }
+    }
+    // &:hover {
+		// 	img:nth-child(1){
+    //     opacity: 0;
+    //   }
+		// 	img:nth-child(2){
+    //     opacity: 1;
+    //   }
+		// }
+}

@@ -1,8 +1,13 @@
 import React from 'react';
 import styles from './HomePage.module.scss';
-import { Header, Footer, Weather } from '../../components';
-import Imgbackground01 from '../../assets/images/homePageBackground01.png';
+import { Row, Col, Carousel } from 'antd';
+import { Header, Footer, Weather, CardCategory, AutoPlaySlider } from '../../components';
+import banner01 from '../../assets/images/banner-01.png';
 import imgLogo from '../../assets/images/logo-1.png';
+import cardAttraction from '../../assets/images/cardAttraction.png';
+import cardFood from '../../assets/images/cardFood.png';
+import cardTransport from '../../assets/images/cardTransport.png';
+import cardHousing from '../../assets/images/cardHousing.png';
 
 const mockWeatherData = [{
   name: "台北市",
@@ -45,18 +50,25 @@ const mockWeatherData = [{
   temp: 25,
 }]
 
+const cardData = [{
+  title: "景點",
+  imgUrl: cardAttraction,
+},{
+  title: "美食",
+  imgUrl: cardFood,
+},{
+  title: "住宿",
+  imgUrl: cardHousing,
+},{
+  title: "交通",
+  imgUrl: cardTransport,
+}]
+
 export const HomePage = () => {
   return (
     <>
-      <Header isShowLogo={false} />
-      <div>
-        <div className={styles.banner}>
-          <div style={{ width: 300 }}>
-            <img src={imgLogo} alt="imgLogo" />
-          </div>
-        </div>
-        <Weather weatherInfos={mockWeatherData} />
-      </div>
+      <Header />
+      <AutoPlaySlider />
       <Footer />
     </>
   )

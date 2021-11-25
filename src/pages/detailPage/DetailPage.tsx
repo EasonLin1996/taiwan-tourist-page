@@ -5,7 +5,7 @@ import { Header, Footer } from '../../components';
 export const DetailPage = () => {
   return (
     <>
-      <Header isShowLogo={false} />
+      <Header />
       <div>
         DetailPage
       </div>
