@@ -49,11 +49,11 @@ const headerList = [
     name2: "ATTRACTION",
     link: "attraction",
     subMenu: [
-      { name: "北台灣", initUrl: initNorthIcon, hoverUrl: hoverNorthIcon,link: "attraction" },
-      { name: "中台灣", initUrl: initCentralIcon, hoverUrl: hoverCentralIcon,link: "attraction" },
-      { name: "南台灣", initUrl: initSouthIcon, hoverUrl: hoverSouthIcon,link: "attraction" },
-      { name: "東台灣", initUrl: initEastIcon, hoverUrl: hoverEastIcon,link: "attraction" },
-      { name: "離島地區", initUrl: initIsladnsIcon, hoverUrl: hoverIsladnsIcon,link: "attraction" },
+      { name: "北台灣", initUrl: initNorthIcon, hoverUrl: hoverNorthIcon, link: "attraction" },
+      { name: "中台灣", initUrl: initCentralIcon, hoverUrl: hoverCentralIcon, link: "attraction" },
+      { name: "南台灣", initUrl: initSouthIcon, hoverUrl: hoverSouthIcon, link: "attraction" },
+      { name: "東台灣", initUrl: initEastIcon, hoverUrl: hoverEastIcon, link: "attraction" },
+      { name: "離島地區", initUrl: initIsladnsIcon, hoverUrl: hoverIsladnsIcon, link: "attraction" },
     ]
   },
   {
@@ -64,7 +64,7 @@ const headerList = [
       { name: "飽餐一頓", initUrl: initMealIcon, hoverUrl: hoverMealIcon, link: "food" },
       { name: "清涼消暑", initUrl: initDrinkIcon, hoverUrl: hoverDrinkIcon, link: "food" },
       { name: "在地美味", initUrl: initSnackIcon, hoverUrl: hoverSnackIcon, link: "food" },
-      { name: "特色名產", initUrl:  initSouvenirIcon, hoverUrl: hoverSouvenirIcon, link: "food" },
+      { name: "特色名產", initUrl: initSouvenirIcon, hoverUrl: hoverSouvenirIcon, link: "food" },
     ]
   },
   {
@@ -96,7 +96,7 @@ export const Header: React.FC = () => {
     <header className={styles.header}>
       <div className="container flexBetween pos-rel">
         <div>
-            <img src={imgLogo} alt="Logo" />
+          <img src={imgLogo} alt="Logo" />
         </div>
         <nav className={styles.nav}>
           <ul className={styles.menu}>
@@ -108,13 +108,13 @@ export const Header: React.FC = () => {
                     <p>{item.name1}</p>
                     <p className={styles['sub-text']}>{item.name2}</p>
                   </div>
-                  <ul className={styles.subMenu} style={{backgroundColor: "beige"}}>
+                  <ul className={styles.subMenu}>
                     {
                       item.subMenu.map((subItem) => (
                         <li className={styles['subMenu-item']}>
-                          <IconHover className={styles.imgBox} init={subItem.initUrl} hover={subItem.hoverUrl}/>
+                          <IconHover className={styles.imgBox} init={subItem.initUrl} hover={subItem.hoverUrl} />
                           <p>{subItem.name}</p>
-                      </li>
+                        </li>
                       ))
                     }
                   </ul>
@@ -124,13 +124,13 @@ export const Header: React.FC = () => {
           </ul>
         </nav>
         <div className={styles['icon-box']}>
-            <div>
-              <img src={iconSearch} alt="search" />
-            </div>
-            <div className="white-back-icon">
-              <img src={iconPerson} alt="person" />
-            </div>
+          <div>
+            <img src={iconSearch} alt="search" />
           </div>
+          <div className="white-back-icon">
+            <img src={iconPerson} alt="person" />
+          </div>
+        </div>
       </div>
     </header>
   );

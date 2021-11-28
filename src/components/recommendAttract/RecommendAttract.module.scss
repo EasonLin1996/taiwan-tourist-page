@@ -1,0 +1,32 @@
+.top-field {
+  padding-left: 12.5%;
+  margin-left: 0;
+  margin-right: 0;
+}
+.bottom-field {
+  margin-top: 40px;
+  padding-left: 18.75%;
+  padding-right: 6.25%;
+}
+.card-box {
+  display: flex;
+
+  &:hover {
+    .card-img {
+      transform: scale(1.2);
+    }
+  }
+}
+.card-txt {
+  writing-mode: vertical-lr;
+}
+.card-imgBox {
+  overflow: hidden;
+  border-radius: 5px;
+  width: 100%;
+}
+.card-img {
+  height: 100%;
+  object-fit: cover;
+  transition: all linear 0.3s;
+}
