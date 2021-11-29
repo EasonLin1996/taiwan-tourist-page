@@ -6,3 +6,4 @@ export * from './UI';
 export * from './autoPlaySlider';
 export * from './recommendAttract';
 export * from './recommendActivity';
+export * from './recommendFood';
