@@ -87,6 +87,7 @@
   }
   .homepage-link {
     display: flex;
+    font-weight: bold;
     color: #769763;
     font-family: 'Open Sans';
 
@@ -96,6 +97,7 @@
       transition: all 0.3s linear;
     }
     &:hover {
+      color: #76976393;
       img {
         transform: translateX(16px);
       }

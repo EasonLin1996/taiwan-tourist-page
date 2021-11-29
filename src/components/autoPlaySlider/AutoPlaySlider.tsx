@@ -24,7 +24,11 @@ const imgUrlAry = [
   }
 ]
 
-export const CustomSlide = (props) => {
+interface SliderPropsType {
+  imgUrl: string;
+}
+
+const CustomSlide = (props: SliderPropsType) => {
   const { imgUrl, ...args } = props;
   return (
     <div className={styles.sliderImgBox}>

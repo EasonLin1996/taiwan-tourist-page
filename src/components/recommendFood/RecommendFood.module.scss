@@ -1,0 +1,20 @@
+.txt-box {
+  margin-bottom: 40px;
+}
+
+.desc-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  
+  a {
+    align-self: flex-end;
+  }
+}
+.slider {
+  margin: 0 -8px;
+}
+.sliderImgBox {
+  display: block;
+  padding: 0 8px;
+}
