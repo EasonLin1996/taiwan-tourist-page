@@ -80,6 +80,9 @@ export const HomePage = () => {
       <div className="page-content">
         <RecommendFood />
       </div>
+      <div className="page-content">
+        {/* <RecommendFood /> */}
+      </div>
       <Footer />
     </>
   )
