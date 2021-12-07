@@ -11,6 +11,7 @@ import imgFood06 from '../../assets/images/homepage/food-06.png';
 import imgFood07 from '../../assets/images/homepage/food-07.png';
 import iconArrow from '../../assets/images/homepage/arrow.svg';
 import styles from './RecommendFood.module.scss';
+import Item from 'antd/lib/list/Item';
 
 const recommendFoodList = [
   {
@@ -59,11 +60,17 @@ interface SliderPropsType {
 }
 
 const CustomSlide = (props: SliderPropsType) => {
-  const { imgUrl, title, descrip, ...args } = props;
+  const { imgUrl, title, descrip, link, ...args } = props;
   return (
-    <a className={styles.sliderImgBox}>
-      <img src={imgUrl} alt={`banner`} />
-    </a>
+    <div style={{padding: "0 8px"}}>
+      <a href={link} className={`pos-rel ${styles.sliderImgBox}`}>
+        <img src={imgUrl} alt={`banner`} />
+        <div className={styles['sliderImgBox-txtbox']}>
+          <h5>{title}</h5>
+          <p>{descrip}</p>
+        </div>
+      </a>
+    </div>
   );
 }
 
@@ -72,10 +79,15 @@ export const RecommendFood: React.FC = () => {
     className: styles.slider,
     dots: false,
     infinite: true,
-    speed: 500,
+    autoplay: true,
+    speed: 2000,
+    autoplaySpeed: 0,
     slidesToShow: 5,
-    slidesToScroll: 5,
-    arrows: false
+    slidesToScroll: 1,
+    centerMode: true,
+    arrows: false,
+    pauseOnHover: true,
+    cssEase: "linear"
   };
   return (
     <>
