@@ -15,7 +15,7 @@ export const RecommendActivity = () => {
 
         </Col>
         <Col span={10}>
-          <h2 className="homepage-subtitle">Participate</h2>
+          <h2 className="homepage-subtitle txt-green">Participate</h2>
           <h1 className="homepage-title">體驗當地風情人文</h1>
           <p className="homepage-descirbe">台灣擁有豐富文俗風情，因地貌多變延伸出豐富的主題活動，邀請你體驗文化的精彩。</p>
           <ul>

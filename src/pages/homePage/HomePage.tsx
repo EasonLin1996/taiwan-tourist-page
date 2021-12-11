@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './HomePage.module.scss';
 import { Row, Col, Carousel } from 'antd';
-import { Header, Footer, Weather, CardCategory, AutoPlaySlider, RecommendAttract, RecommendActivity } from '../../components';
+import { Header, Footer, Weather, CardCategory, AutoPlaySlider, RecommendAttract, RecommendActivity, Subscribe } from '../../components';
 import banner01 from '../../assets/images/banner-01.png';
 import imgLogo from '../../assets/images/logo-1.png';
 import cardAttraction from '../../assets/images/cardAttraction.png';
@@ -76,6 +76,9 @@ export const HomePage = () => {
       </div>
       <div className="page-content">
         <RecommendActivity />
+      </div>
+      <div className="page-content" style={{ backgroundColor: "rgba(118, 151, 99, 1)" }}>
+        <Subscribe />
       </div>
       <Footer />
     </>

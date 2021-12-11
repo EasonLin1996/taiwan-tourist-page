@@ -45,10 +45,10 @@ export const RecommendAttract = () => {
     <>
       <Row justify="space-between" className={styles["top-field"]}>
         <Col span={10}>
-          <h2 className="homepage-subtitle">Explore</h2>
+          <h2 className="homepage-subtitle txt-green">Explore</h2>
           <h1 className="homepage-title">探索台灣每個角落</h1>
           <p className="homepage-descirbe">台灣擁有高山峽谷及四面環海地理特性，因此擁有各種自然景致等待人們發現，無論想要來場山林陶冶身心之旅，抑或體驗歷史人文的深度旅行，都可以在台灣這片土地上踏尋不同的風采。</p>
-          <a href="#" className="homepage-link">
+          <a href="/" className="homepage-link">
             探索更多景色
             <img src={iconArrow} alt="linkIcon" />
           </a>
