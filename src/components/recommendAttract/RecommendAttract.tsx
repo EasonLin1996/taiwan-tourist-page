@@ -15,32 +15,32 @@ const { Title } = Typography;
 
 const topImg = [
   {
-    name: "台東金剛大道", imgUrl: cardImg01
+    name: "台東金剛大道", imgUrl: cardImg01, link: "/"
   },
   {
-    name: "南投日月潭文武廟", imgUrl: cardImg02
+    name: "南投日月潭文武廟", imgUrl: cardImg02, link: "/"
   },
   {
-    name: "", imgUrl: cardImg03
+    name: "", imgUrl: cardImg03, link: "/"
   }
 ]
 
 const bottomImg = [
   {
-    name: "南投合歡山", imgUrl: cardImg04
+    name: "南投合歡山", imgUrl: cardImg04, link: "/"
   },
   {
-    name: "北投圖書館", imgUrl: cardImg05
+    name: "北投圖書館", imgUrl: cardImg05, link: "/"
   },
   {
-    name: "樹林青龍嶺步道", imgUrl: cardImg06
+    name: "樹林青龍嶺步道", imgUrl: cardImg06, link: "/"
   },
   {
-    name: "水里車埕車站", imgUrl: cardImg07
+    name: "水里車埕車站", imgUrl: cardImg07, link: "/"
   }
 ]
 
-export const RecommendAttract = () => {
+export const RecommendAttract: React.FC = () => {
   return (
     <>
       <Row justify="space-between" className={styles["top-field"]}>
@@ -56,9 +56,9 @@ export const RecommendAttract = () => {
         {
           topImg.map((item) => (
             <Col key={item.name} span={!isEmpty(item.name) ? 5 : 3} className={styles['card-box']}>
-              <div className={styles['card-imgBox']} style={isEmpty(item.name) ? { borderRadius: "5px 0 0 5px" } : {}}>
+              <a href={item.link} className={styles['card-imgBox']} style={isEmpty(item.name) ? { borderRadius: "5px 0 0 5px" } : {}}>
                 <img className={styles['card-img']} src={item.imgUrl} alt={item.name} />
-              </div>
+              </a>
               {
                 !isEmpty(item.name) && (
                   <h4 className={styles['card-txt']}>{item.name}</h4>
@@ -72,9 +72,9 @@ export const RecommendAttract = () => {
         {
           bottomImg.map((item) => (
             <Col style={{ paddingRight: 16 }} key={item.name} span={6} className={`gutter-row ${styles['card-box']}`}>
-              <div className={styles['card-imgBox']}>
+              <a href={item.link} className={styles['card-imgBox']}>
                 <img className={styles['card-img']} src={item.imgUrl} alt={item.name} />
-              </div>
+              </a>
               {
                 !isEmpty(item.name) && (
                   <h4 className={styles['card-txt']}>{item.name}</h4>
