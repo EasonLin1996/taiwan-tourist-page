@@ -4,4 +4,11 @@
   border-radius: 20px;
   text-align: center;
   color: rgba(118, 151, 99, 1);
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.2s linear;
+  &:hover,
+  &:active {
+    background: rgba(118, 151, 99, 0.2);
+  }
 }

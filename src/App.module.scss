@@ -37,6 +37,11 @@
   }
   a {
     text-decoration: none;
+    color: rgba(115, 115, 115, 1);
+    &:active,
+    &:hover {
+      color: rgba(115, 115, 115, 1);
+    }
   }
   img {
     width: 100%;
@@ -52,7 +57,15 @@
     color: #769763;
   }
   .txt-gray {
-    color: 737373;
+    color: #737373;
+  }
+  .link-box {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
   .white-back-icon {
     border-radius: 50%;

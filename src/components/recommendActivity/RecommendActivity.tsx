@@ -46,7 +46,7 @@ export const RecommendActivity: React.FC = () => {
         </Col>
         <Col span={10}>
           <h2 className="homepage-subtitle txt-green">Participate</h2>
-          <h1 className="homepage-title">體驗當地風情人文</h1>
+          <h1 className="homepage-title txt-gray">體驗當地風情人文</h1>
           <p className="homepage-descirbe">台灣擁有豐富文俗風情，因地貌多變延伸出豐富的主題活動，邀請你體驗文化的精彩。</p>
           <ul className={styles['list']}>
             {
@@ -59,7 +59,7 @@ export const RecommendActivity: React.FC = () => {
                     href={item.link}
                   >
                     {item.name}
-                    <span  className={styles['item-dot']}></span>
+                    <span className={styles['item-dot']}></span>
                   </a>
                 </li>
               ))

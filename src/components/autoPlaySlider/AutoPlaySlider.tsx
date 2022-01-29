@@ -2,10 +2,10 @@ import React from 'react';
 import Slider from "react-slick";
 import styles from './AutoPlaySilder.module.scss';
 import banner01 from '../../assets/images/background/banner-01.png';
-import banner02 from '../../assets/images/background/pexels-timo-volz-7854960.jpg';
-import banner03 from '../../assets/images/background/pexels-pixabay-260566.jpg';
-import banner04 from '../../assets/images/background/pexels-tsang-chung-yee-669964.jpg';
-import banner05 from '../../assets/images/background/pexels-belle-co-981147.jpg';
+import banner02 from '../../assets/images/background/banner-2.png';
+import banner03 from '../../assets/images/background/banner-3.png';
+import banner04 from '../../assets/images/background/banner-4.png';
+import banner05 from '../../assets/images/background/banner-5.png';
 import banner06 from '../../assets/images/background/pexels-tsang-chung-yee-669963.jpg';
 
 const imgUrlAry = [
