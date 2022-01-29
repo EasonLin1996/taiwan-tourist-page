@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Menu } from 'antd';
 import { IconHover } from '../../components';
 import styles from './Header.module.scss';
@@ -47,7 +48,7 @@ const headerList = [
   {
     name1: "找景點",
     name2: "ATTRACTION",
-    link: "attraction",
+    link: "ScenicSpot",
     subMenu: [
       { name: "北台灣", initUrl: initNorthIcon, hoverUrl: hoverNorthIcon, link: "attraction" },
       { name: "中台灣", initUrl: initCentralIcon, hoverUrl: hoverCentralIcon, link: "attraction" },
@@ -59,7 +60,7 @@ const headerList = [
   {
     name1: "找美食",
     name2: "DELICACY",
-    link: "food",
+    link: "Restaurant",
     subMenu: [
       { name: "飽餐一頓", initUrl: initMealIcon, hoverUrl: hoverMealIcon, link: "food" },
       { name: "清涼消暑", initUrl: initDrinkIcon, hoverUrl: hoverDrinkIcon, link: "food" },
@@ -70,7 +71,7 @@ const headerList = [
   {
     name1: "找活動",
     name2: "ACTIVITY",
-    link: "activity",
+    link: "Activity",
     subMenu: [
       { name: "藝文展演", initUrl: initExhitionIcon, hoverUrl: hoverExhitionIcon, link: "activity" },
       { name: "戶外露營", initUrl: initCampingIcon, hoverUrl: hoverCampingIcon, link: "activity" },
@@ -81,7 +82,7 @@ const headerList = [
   {
     name1: "探索更多",
     name2: "MORE",
-    link: "more",
+    link: "Hotel",
     subMenu: [
       { name: "親子同遊", initUrl: initFamilyIcon, hoverUrl: hoverFamilyIcon, link: "more" },
       { name: "溫泉之旅", initUrl: initHotSpringIcon, hoverUrl: hoverHotSpringIcon, link: "more" },
@@ -95,23 +96,25 @@ export const Header: React.FC = () => {
   return (
     <header className={styles.header}>
       <div className="container flexBetween pos-rel">
-        <div>
+        <Link to="/">
           <img src={imgLogo} alt="Logo" />
-        </div>
+        </Link>
         <nav className={styles.nav}>
           <ul className={styles.menu}>
             {
               headerList.map((item) => (
                 <li className={styles['menu-item']} key={item.link}>
-                  <span className={styles.dot}></span>
-                  <div className={styles['text-box']}>
-                    <p>{item.name1}</p>
-                    <p className={styles['sub-text']}>{item.name2}</p>
-                  </div>
+                  <Link to={`/searchPage?category=${item.link}`} className="link-box">
+                    <span className={styles.dot}></span>
+                    <div className={styles['text-box']}>
+                      <p>{item.name1}</p>
+                      <p className={styles['sub-text']}>{item.name2}</p>
+                    </div>
+                  </Link>
                   <ul className={styles.subMenu}>
                     {
                       item.subMenu.map((subItem) => (
-                        <li className={styles['subMenu-item']}>
+                        <li className={styles['subMenu-item']} key={subItem.initUrl}>
                           <IconHover className={styles.imgBox} init={subItem.initUrl} hover={subItem.hoverUrl} />
                           <p>{subItem.name}</p>
                         </li>

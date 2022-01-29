@@ -11,7 +11,7 @@ const App = () => {
           <Route path='/' exact component={HomePage} />
           {/* <Route path='/login' component={LoginPage} /> */}
           <Route path='/searchPage' exact component={SearchPage} />
-          <Route path='/detailPage' exact component={DetailPage} />
+          <Route path='/searchPage/detailPage' exact component={DetailPage} />
           <Route render={() => (<h1>404您輸入的頁面不存在</h1>)} />
         </Switch>
       </BrowserRouter>

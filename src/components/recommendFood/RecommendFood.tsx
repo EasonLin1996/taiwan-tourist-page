@@ -62,7 +62,7 @@ interface SliderPropsType {
 const CustomSlide = (props: SliderPropsType) => {
   const { imgUrl, title, descrip, link, ...args } = props;
   return (
-    <div style={{padding: "0 8px"}}>
+    <div style={{ padding: "0 8px" }}>
       <a href={link} className={`pos-rel ${styles.sliderImgBox}`}>
         <img src={imgUrl} alt={`banner`} />
         <div className={styles['sliderImgBox-txtbox']}>
@@ -84,6 +84,7 @@ export const RecommendFood: React.FC = () => {
     autoplaySpeed: 0,
     slidesToShow: 5,
     slidesToScroll: 1,
+    swipeToSlide: false,
     centerMode: true,
     arrows: false,
     pauseOnHover: true,
@@ -94,11 +95,11 @@ export const RecommendFood: React.FC = () => {
       <div className="container">
         <Row className={styles['txt-box']}>
           <Col span={12}>
-            <h2 className="homepage-subtitle">Explore</h2>
-            <h1 className="homepage-title">享受在地獨特風味</h1>
+            <h2 className="homepage-subtitle txt-green">Explore</h2>
+            <h1 className="homepage-title txt-gray">享受在地獨特風味</h1>
           </Col>
           <Col span={12} className={styles['desc-box']}>
-            <p className="homepage-descirbe" style={{margin: 0}}>充斥在台灣大街小巷的在地美食，融合當地生活與文化特色，發展出各式各樣風味，從銅板小吃到精緻料理，數不清的美味讓你飽餐一頓。</p>
+            <p className="homepage-descirbe" style={{ margin: 0 }}>充斥在台灣大街小巷的在地美食，融合當地生活與文化特色，發展出各式各樣風味，從銅板小吃到精緻料理，數不清的美味讓你飽餐一頓。</p>
             <a href="#" className="homepage-link">
               享用更多美食
               <img src={iconArrow} alt="linkIcon" />
@@ -106,7 +107,7 @@ export const RecommendFood: React.FC = () => {
           </Col>
         </Row>
         <div>
-      </div>
+        </div>
       </div>
       <div style={{ width: "100%", overflow: "hidden" }}>
         <Slider {...settings}>

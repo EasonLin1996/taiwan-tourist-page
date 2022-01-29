@@ -6,5 +6,6 @@ export * from './UI';
 export * from './autoPlaySlider';
 export * from './recommendAttract';
 export * from './recommendActivity';
+export * from './subscribe';
 export * from './recommendFood';
 export * from './searchSideBar';
