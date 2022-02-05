@@ -87,7 +87,7 @@ export const getRecommendProductCreator =
       const { data } = await axios.get(
         `https://ptx.transportdata.tw/MOTC/v2/Tourism/${category}/${
           city ? city : ''
-        }?$top=30&$format=JSON${
+        }?$format=JSON${
           name ? `&$filter=contains(${category}Name,'${name}')` : ''
         }`,
         // &$filter=contains(ID,'C1_315080500H_000068')

@@ -6,16 +6,26 @@ import { getDetailProductCreator } from '../../redux/detailProduct/detailProduct
 import { Row, Col, Breadcrumb, Input, Card, Spin } from 'antd';
 import iconSpot from '../../assets/images/iconSpot.svg';
 import iconPhone from '../../assets/images/iconPhone.svg';
+import defaultActivityImg from '../../assets/images/searchpage/emptyActivity.jpg';
+import defaultFoodImg from '../../assets/images/searchpage/emptyFood.jpg';
+import defaultSpotImg from '../../assets/images/searchpage/emptySpot.jpg';
 import { Header, Footer } from '../../components';
 import styles from './DetailPage.module.scss';
 
 const IconSpot = ({ style }: any) => <img src={iconSpot} style={style} alt="search" />
 const IconPhone = ({ style }: any) => <img src={iconPhone} style={style} alt="search" />
 
+const categoryMap = {
+  ScenicSpot: "景點",
+  Restaurant: "餐廳",
+  Activity: "活動",
+  Hotel: "住宿",
+}
+
 export const DetailPage = () => {
   const history = useHistory();
   const params = new URLSearchParams(history.location.search);
-  const category = params.get('cate');
+  const category = params.get('cate') || '';
   const id = params.get('id');
   const dispatch = useDispatch();
   const productOne = useSelector((state) => state.detailProduct.productOne[0]);
@@ -43,19 +53,19 @@ export const DetailPage = () => {
         ) : (
           <>
             <div className="container">
-              <Breadcrumb style={{ margin: "40px 0" }}>
+              <Breadcrumb style={{ marginTop: 40 }}>
                 <Breadcrumb.Item>
-                  <Link to="/">Home</Link>
+                  <Link to="/">首頁</Link>
                 </Breadcrumb.Item>
                 <Breadcrumb.Item>
-                  <Link to={`/searchpage?category=${category}`}>Search</Link>
+                  <Link to={`/searchpage?category=${category}`}>{categoryMap[category]}</Link>
                 </Breadcrumb.Item>
                 <Breadcrumb.Item>
                   {productOne[`${category}Name`]}
                 </Breadcrumb.Item>
               </Breadcrumb>
             </div>
-            <div>
+            <div style={{ margin: "40px 0" }}>
               <div className="container">
                 <Row gutter={24}>
                   <Col span={11}>
@@ -64,7 +74,7 @@ export const DetailPage = () => {
                       <div className="flexCenterY" style={{ margin: "15px 0" }}>
                         <IconSpot style={{ width: 25 }} />
                         <p style={{ margin: "0 8px" }}>{productOne.Address || '- -'}</p>
-                        <Link to="/" className={styles.btn}>查看地圖</Link>
+                        <a href={`https://www.google.com.tw/search?q=${productOne?.Position?.PositionLat}%2C+${productOne?.Position?.PositionLon}`} target="_blank" rel="noreferrer" className={styles.btn}>查看地圖</a>
                       </div>
                       <div className="flexCenterY">
                         <IconPhone style={{ width: 25 }} />
@@ -98,7 +108,16 @@ export const DetailPage = () => {
                     </div>
                   </Col>
                   <Col span={13}>
-                    <img src={productOne.Picture.PictureUrl1} alt="item" className={styles['mainItem_img']} />
+                    {
+                      (productOne.Picture && productOne.Picture.PictureUrl1) ? (
+                        <img alt={productOne.Name} src={productOne.Picture.PictureUrl1} />
+                      ) : (
+                        <img
+                          alt="defaultImg"
+                          src={category === "Activity" ? defaultActivityImg : category === "Restaurant" ? defaultFoodImg : defaultSpotImg}
+                        />
+                      )
+                    }
                   </Col>
                 </Row>
               </div>

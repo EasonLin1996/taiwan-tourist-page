@@ -9,9 +9,9 @@ export const Footer: React.FC = () => {
         <Row justify="space-between">
           <Col span={3} className="flexBetween">
             <p>Follow us</p>
-            <p>f</p>
-            <p>i</p>
-            <p>y</p>
+            <p>F</p>
+            <p>I</p>
+            <p>T</p>
           </Col>
           <Col span={16} className="flexBetween">
             <p>Copyright © 2021 TRAVEL. All rights reserved. Design by Lola , Front Developed by Rick.</p>

@@ -28,7 +28,6 @@ export const Subscribe = () => {
             <Form.Item
               hasFeedback
               name="email"
-              validateStatus="warning"
             >
               <Input
                 id="warning"

@@ -13,22 +13,22 @@ const activityList = [
   {
     name: "一年一度精采盛事",
     imgUrl: imgActivity01,
-    link: "/",
+    link: "/searchpage?category=Activity",
   },
   {
     name: "追逐自由單車旅程",
     imgUrl: imgActivity02,
-    link: "/",
+    link: "/searchpage?category=Activity",
   },
   {
     name: "親自踏上山海之旅",
     imgUrl: imgActivity03,
-    link: "/",
+    link: "/searchpage?category=Activity",
   },
   {
     name: "體驗台灣文化慶典",
     imgUrl: imgActivity04,
-    link: "/",
+    link: "/searchpage?category=Activity",
   }
 ]
 
