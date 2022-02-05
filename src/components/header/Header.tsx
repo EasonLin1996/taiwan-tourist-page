@@ -80,8 +80,8 @@ const headerList = [
     ]
   },
   {
-    name1: "探索更多",
-    name2: "MORE",
+    name1: "住宿",
+    name2: "HOTEL",
     link: "Hotel",
     subMenu: [
       { name: "親子同遊", initUrl: initFamilyIcon, hoverUrl: hoverFamilyIcon, link: "more" },

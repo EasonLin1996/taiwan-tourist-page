@@ -18,6 +18,10 @@ const searchCategory = [
   {
     name: "活動",
     key: "Activity"
+  },
+  {
+    name: "住宿",
+    key: "Hotel"
   }
 ];
 
